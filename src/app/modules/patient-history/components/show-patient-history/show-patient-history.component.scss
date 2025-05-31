@@ -1,0 +1,25 @@
+table tr{
+    border-bottom: 1.5px solid rgb(238, 238, 238);
+    /* border-top: 1.5px solid rgb(71, 71, 202); */
+  }
+  table tr:nth-child(1){
+    /* background-color: #2e50a6; */
+    /* color: white; */
+    border-top: 1.5px solid rgb(238, 238, 238);
+  }
+  table tr th{
+    color: #243c78;
+    font-size: 13px;
+    font-weight: 550;
+    padding: 15px 0;
+  }
+  table tr td{
+    font-size: 13px;
+    font-weight: 450;
+    padding: 14px 0;
+    text-align: center;
+  }
+  table tr td i{
+    font-size: 18px;
+  }
+  

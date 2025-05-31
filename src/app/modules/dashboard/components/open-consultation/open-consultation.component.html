@@ -1,0 +1,82 @@
+<!-- Open consultation section starts here -->
+<main class="mainContainer mt-10">
+    <div class="top2-container rounded-3xl mt-8">
+        <form action="" class="form w-full flex flex-wrap items-center py-4">
+            <div class="input-group flex">
+                <input type="text" name="consult date" id="clinic" placeholder="Select Consultation Date">
+            </div>
+
+            <button type="submit"><fa-icon [icon]="searchIcon" class="mr-2"></fa-icon>
+                SEARCH</button>
+            <button type="reset" class="reset"><fa-icon [icon]="rotateIcon" class="mr-1"></fa-icon>
+                RESET</button>
+        </form>
+    </div>
+
+    <div class="bottomSect box-border text-slate-600 flex flex-wrap justify-between mx-auto overflow-hidden">
+
+        <div class="order-wrapper w-full px-4 mt-8  mb-1 flex justify-between">
+            <div class="orders head ml-4"><fa-icon [icon]="handIcon" class="mr-3"></fa-icon>Open/Active Consultation
+            </div>
+            <div class="select">
+                <select name="items" class="bg-gray-100 text-sm p-1 mr-2 outline-none border-collapse rounded-md">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="20" selected>20</option>
+                </select><span class="text-sm">Items</span>
+            </div>
+        </div>
+
+        <div class="mid-section w-full mx-4 px-5 py-3 p-0 mb-3 font-medium">Showing <span
+                class="font-semibold">1-20</span> of <span class="font-semibold">47</span> items.
+        </div>
+
+        <table class="w-full mx-10 mt-6 mb-4 text-center">
+            <thead>
+                <tr class="border-y border-gray-200 border-solid">
+                    <th class="py-4 text-sm font-medium text-blue-900">Case ID</th>
+                    <th class="py-4 text-sm font-medium text-blue-900">Patient Name</th>
+                    <th class="py-4 text-sm font-medium text-blue-900">consultation_type</th>
+                    <th class="py-4 text-sm font-medium text-blue-900">Date</th>
+                    <th class="py-4 text-sm font-medium text-blue-900">Time</th>
+                    <th class="py-4 text-sm font-medium text-blue-900">Charge</th>
+                    <th class="py-4 text-sm font-medium text-blue-900">Status</th>
+                    <th class="py-4 text-sm font-medium text-blue-900">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-b border-gray-200 border-solid" *ngFor="let table of tableDataInfo | paginate : {
+                    id: 'pagination',
+                    itemsPerPage: PAGE_SIZE,
+                    currentPage: currentConsultPage,
+                    totalItems: totalConsults}">
+                    <td class="py-4 text-sm font-normal">{{table.caseId}}</td>
+                    <td class="py-4 text-sm font-normal">{{table.patientName}}</td>
+                    <td class="py-4 text-sm font-normal">{{table.consultationType}}</td>
+                    <td class="py-4 text-sm font-normal">{{table.consultDate}}</td>
+                    <td class="py-4 text-sm font-normal">{{table.consultTime}}</td>
+                    <td class="py-4 text-sm font-normal">{{table.charge}}</td>
+                    <td class="py-4 text-sm font-normal">{{table.status}}</td>
+                    <td><button class="bg-green-400 text-white py-2 px-5 rounded-3xl mr-2 hover:bg-green-600"
+                            style="font-size:10px;"
+                            [ngStyle]="{display: !table.buttonText1 ? 'none':''}">{{table.buttonText1}}</button>
+                        <button class="bg-sky-600 text-white py-2 px-5 rounded-3xl hover:bg-red-300"
+                            style="font-size:10px;">{{table.buttonText2}}</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="page-nav w-full flex justify-center items-center my-8 p-3">
+            <pagination-controls id="pagination" [maxSize]="PAGE_SIZE"
+                (pageChange)="onPageChange(currentConsultPage = $event)"></pagination-controls>
+        </div>
+    </div>
+</main>
+
+<!-- Open consultation section ends here -->

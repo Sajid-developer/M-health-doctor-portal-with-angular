@@ -1,0 +1,90 @@
+<main>
+    <section class="flex w-full">
+      <div class="flex-1 text-sm w-[calc(100%-16rem)]">
+        <section class="max-h-screen overflow-auto">
+          <main class="w-full py-14 pl-10 flex flex-col gap-4">
+            <main class="mainContainer ">
+  
+              <div class="top2-container rounded-3xl mt-8">
+                <form action="" class="form w-full flex flex-wrap items-center py-4">
+                  <div class="input-group flex">
+                    <input type="text" name="clinic name" id="clinic" placeholder="Enter Support Ticket Title">
+                  </div>
+                  <div class="input-group flex mx-2">
+                    <!-- <input type="text" name="address" id="address" placeholder="Select a Status"> -->
+                    <select name="status" id="Status">
+                      <option value="" hidden>Select a Status</option>
+                      <option value="Open">Open</option>
+                      <option value="Reopen">Reopen</option>
+                      <option value="Close">Close</option>
+                    </select>
+                  </div>
+  
+                  <button type="submit">SEARCH</button>
+                  <button type="reset" class="reset"><i class="fa-solid fa-rotate mr-1"></i>RESET</button>
+                </form>
+              </div>
+  
+              <div class="bottomSect box-border text-slate-600 flex flex-wrap justify-between mx-auto overflow-hidden">
+  
+                <div class="order-wrapper w-full px-4 mt-8  mb-1 flex justify-between">
+                  <div class="orders head ml-4"><i class="fa-solid fa-heart mr-3"></i>Help & Support</div>
+                  <button class="mr-5 bg-sky-500 text-white py-2 px-6 rounded-3xl hover:bg-sky-700" title="Create ticket"
+                    (click)="handleCreateTicket()"><i class="fa-solid fa-plus mr-2"></i>CREATE</button>
+                </div>
+  
+                <div class="mid-section w-full mx-4 px-5 py-3 p-0 mb-3">Showing <span>1-5</span> of <span>5</span> items.
+                </div>
+  
+                <table class="w-full mx-10 mt-6 mb-12 text-center">
+                  <tr>
+                    <th>Sr. No</th>
+                    <th>Support Ticket Title</th>
+                    <th>Support Ticket Status</th>
+                    <th>Support Ticket Created At</th>
+                    <th>Actions</th>
+                  </tr>
+                  <tr>
+                    <td>01</td>
+                    <td>Abc</td>
+                    <td>Open</td>
+                    <td>2024-02-27 01:23 PM</td>
+                    <td><a [routerLink]="'/support-ticket/chat-support/1'" title=" Message "><fa-icon
+                          [icon]="commentDotIcon"></fa-icon></a></td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>Xyz</td>
+                    <td>Open</td>
+                    <td>2024-03-14 05:43 PM</td>
+                    <td><a [routerLink]="'/support-ticket/chat-support/1'" title=" Message "><fa-icon
+                          [icon]="commentDotIcon"></fa-icon></a></td>
+                  </tr>
+                  <tr>
+                    <td>03</td>
+                    <td>Support</td>
+                    <td>Open</td>
+                    <td>2024-05-27 03:55 PM</td>
+                    <td><a [routerLink]="'/support-ticket/chat-support/1'" title=" Message "><fa-icon
+                          [icon]="commentDotIcon"></fa-icon></a></td>
+                  </tr>
+                  <tr>
+                    <td>04</td>
+                    <td>My Ticket</td>
+                    <td>Open</td>
+                    <td>2024-01-21 02:24 PM</td>
+                    <td><a [routerLink]="'/support-ticket/chat-support/1'" title=" Message "><fa-icon
+                          [icon]="commentDotIcon"></fa-icon></a></td>
+                  </tr>
+                </table>
+              </div>
+            </main>
+          </main>
+        </section>
+        <ngx-spinner [fullScreen]="true" size="large" color="#FFFFFF" type="ball-spin-clockwise-fade">
+          <p class="text-white text-2xl">Loading...</p>
+        </ngx-spinner>
+      </div>
+    </section>
+  </main>
+  

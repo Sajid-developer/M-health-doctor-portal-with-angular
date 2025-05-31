@@ -1,0 +1,156 @@
+<main class=" bg-slate-100">
+    <section class="flex w-full">
+      <!-- <div class="fixed max-w-64 w-64">
+        <app-authenticated-sidebar></app-authenticated-sidebar>
+      </div> -->
+      <div class="flex-1 text-sm">
+        <!-- <section class="fixed ml-64 p-2 top-0 w-[calc(100%-16rem)] z-50">
+          <app-authenticated-header></app-authenticated-header>
+        </section> -->
+        <section
+          class="py-16 w-auto place-self-center flex place-content-center"
+        >
+          <main class="w-full p-2 mx-10">
+          <!-- Top input form Start-->
+          <div class="gap-5 flex flex-col">
+            <div class="flex flex-row gap-5 w-full h-auto">
+              <input
+                class="w-1/2 p-4 bg-slate-200 h-10 rounded-full"
+                type="date"
+                placeholder="Date"
+              />
+              <input
+                class="w-1/2 p-4 bg-slate-200 h-10 rounded-full"
+                type="text"
+                placeholder="Enter Name"
+              />
+            </div>
+  
+            <div>
+              <select class="w-1/2 p-4 bg-slate-200 h-10 rounded-md" name="cars" placeholder = "consultationDate">
+              <option value="volvo">consultationDate</option>
+              <option value="saab">Saab</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+            </select>
+          </div>
+          <div class="flex flex-row gap-5 place-content-center">
+              <button class="bg-green-400 px-10 py-2 rounded-3xl text-lg">Search</button>
+              <button class="bg-gray-200 px-10 py-2 rounded-3xl text-lg">Reset</button>
+          </div>
+          <div class="bg-white rounded-xl p-5 gap-5 flex flex-col">
+              <div class="flex flex-row justify-between">
+                  <div class="text-base font-semibold">Consultation History</div>
+                  <div><div><span>Items per page</span><select class="border" name="cars" id="cars">
+                    <option value="volvo">5</option>
+                    <option value="saab">10</option>
+                    <option value="mercedes">15</option>
+                    <option value="audi">20</option>
+                  </select></div></div>
+              </div>
+              <div>showing Result</div>
+              <div>
+                  <table class="table w-full ">
+                  <tr>
+                    <th >CaseID</th>
+                    <th>Patient Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Consult Type</th>
+                    <th>Status</th>
+                    <th>Consultation Type</th>
+                    <th>Action</th>
+                  </tr>
+                  <tr >
+                    <td>453</td>
+                    <td>Abdirahman Dahir</td>
+                    <td>2024-04-16</td>
+                    <td>12:15 TO 12:30</td>
+                    <td>Call</td>
+                    <td>Booked</td>
+                    <td>Paid</td>
+                    <td>Action</td>
+                  </tr>
+                  <tr>
+                    <td>453</td>
+                    <td>Abdirahman Dahir</td>
+                    <td>2024-04-16</td>
+                    <td>12:15 TO 12:30</td>
+                    <td>Call</td>
+                    <td>Booked</td>
+                    <td>Paid</td>
+                    <td>Action</td>
+                  </tr>
+                  <tr >
+                    <td>453</td>
+                    <td>Abdirahman Dahir</td>
+                    <td>2024-04-16</td>
+                    <td>12:15 TO 12:30</td>
+                    <td>Call</td>
+                    <td>Booked</td>
+                    <td>Paid</td>
+                    <td>Action</td>
+                  </tr>
+                  <tr >
+                    <td>453</td>
+                    <td>Abdirahman Dahir</td>
+                    <td>2024-04-16</td>
+                    <td>12:15 TO 12:30</td>
+                    <td>Call</td>
+                    <td>Booked</td>
+                    <td>Paid</td>
+                    <td>Action</td>
+                  </tr>
+                  <tr >
+                    <td>453</td>
+                    <td>Abdirahman Dahir</td>
+                    <td>2024-04-16</td>
+                    <td>12:15 TO 12:30</td>
+                    <td>Call</td>
+                    <td>Booked</td>
+                    <td>Paid</td>
+                    <td>Action</td>
+                  </tr>
+                  <tr >
+                    <td>453</td>
+                    <td>Abdirahman Dahir</td>
+                    <td>2024-04-16</td>
+                    <td>12:15 TO 12:30</td>
+                    <td>Call</td>
+                    <td>Booked</td>
+                    <td>Paid</td>
+                    <td>Action</td>
+                  </tr>
+                  <tr >
+                    <td>453</td>
+                    <td>Abdirahman Dahir</td>
+                    <td>2024-04-16</td>
+                    <td>12:15 TO 12:30</td>
+                    <td>Call</td>
+                    <td>Booked</td>
+                    <td>Paid</td>
+                    <td>Action</td>
+                  </tr>
+                 
+                </table>
+                <div class="place-content-center">
+                  <div>Pagination</div>
+                </div>
+              </div>
+          </div>
+      </div>
+            <!-- Top input form Ends-->
+          </main>
+        </section>
+        <ngx-spinner
+          [fullScreen]="true"
+          size="large"
+          color="#FFFFFF"
+          type="ball-spin-clockwise-fade"
+        >
+          <p class="text-white text-2xl">Loading...</p>
+        </ngx-spinner>
+      </div>
+    </section>
+  </main>
+  

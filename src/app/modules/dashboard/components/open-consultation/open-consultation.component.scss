@@ -1,0 +1,109 @@
+.mainContainer .bottomSect{
+    width: 100%;
+    height: auto;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 20px;
+    /* padding:15px 0; */
+    box-sizing: border-box;
+}
+.mainContainer .form input{
+    width: 300px;
+    padding: 10px 12px 10px 20px;
+    margin-right:15PX;
+    border-radius: 30px;
+    background-color: rgb(233, 233, 233);
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    /* border: 1px solid gray; */
+}
+.mainContainer .form label{
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 8px;
+}
+.form input::placeholder{
+    color: #716f86;
+}
+.mainContainer .form button{
+    display: flex;
+    align-items: center;
+    height: 34px;
+    background-color: rgb(17, 166, 215);
+    padding: 8px 26px;
+    margin: 0 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    transition: 0.2s ease;
+}
+.bottomSect .form label{
+    /* border: 2px solid black; */
+    font-size: 13px;
+    margin: 0;
+    margin-left: 4px;
+    margin-bottom: 8px;
+}
+.bottomSect label span{
+    font-size: 16px;
+    color: red;
+}
+.mainContainer .form button.reset{
+    background-color:black;
+    color: whitesmoke;
+    font-weight: 500;
+    padding: 8px 22px;
+    box-shadow: 1px 3px 6px rgba(0,0,0,0.4);
+}
+.mainContainer .form button.reset:hover{
+    background-color: rgb(220, 220, 220);
+    color: rgb(17, 24, 61);
+}
+.mainContainer .form button:hover{
+    background-color: rgb(43, 124, 255);
+}
+.bottomSect .order-wrapper .orders.head{
+    font-size: 14px;
+    font-weight: 550;
+    color: rgb(66, 66, 104);
+}
+.bottomSect .order-wrapper button{
+    font-size: 14px;
+    font-weight: 530;
+}
+.mid-section{
+    color: rgb(78, 86, 137);
+}
+.mid-section span{
+    color: rgb(59, 70, 142);
+}
+ ::ng-deep .ngx-pagination{
+    display: flex;
+ }
+ .page-nav::ng-deep .ngx-pagination li{    
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 4px;
+    overflow: hidden;
+ }
+ ::ng-deep .ngx-pagination li.pagination-next{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    line-height: 30px;
+ }
+ ::ng-deep .ngx-pagination li.pagination-next.disabled{
+    // display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content:flex-end;
+    line-height: 30px;
+ }
+

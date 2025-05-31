@@ -1,0 +1,272 @@
+<section class="topHead">
+    <div class="rightBox">
+        <select name="home" class="select1">
+            <option value="home">For Provider</option>
+            <option value="about">Hospital & Doctor login</option>
+        </select>|
+        <select name="language">
+            <option value="English">English</option>
+            <option value="Somali">Somali</option>
+        </select>|
+        <div class="text"><span>For Queries</span> 3177</div>
+    </div>
+</section>
+
+<!-- header starts here -->
+
+<header class="header">
+    <nav>
+        <div class="logo">
+            <a routerLink="/">
+                <img src="./assets/images/landing/logo.png" alt="Company logo">
+            </a>
+        </div>
+
+        <div class="menu">
+            <a routerLink="/appointment">
+                <span>Appointment</span>
+                <small>Book an appointment</small>
+            </a>
+            <a routerLink="/video-consult">
+                <span>Video Consult</span>
+                <small>Consult with top doctors</small>
+            </a>
+            <a routerLink="/home-care">
+                <span>Home Care</span>
+                <small>Home consultation</small>
+            </a>
+            <a routerLink="/pharmacy">
+                <span>Pharmacy</span>
+                <small>Buy medicines</small>
+            </a>
+            <a routerLink="/laboratory">
+                <span>Laboratory</span>
+                <small>Book tests & checkups</small>
+            </a>
+            <a routerLink="/about-baano">
+                <span>About Baano</span>
+                <small>Healthcare simplifies</small>
+            </a>
+        </div>
+
+        <div class="buttons">
+            <a routerLink="/login"><button class="button" (click)="handleLogin()">Login</button></a>
+            <a routerLink="/sign-up"><button class="button active" (click)="handleRegister()">Sign up</button></a>
+        </div>
+    </nav>
+</header>
+
+<!-- header ends here -->
+
+<main>
+    <!-- Swiper -->
+    <div class="swiper mySwiper1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide sliders" *ngFor="let slider of infoSlider">
+                <div class="text-content">
+                    <h2>{{slider.title}}</h2>
+                    <p>{{slider.text}}</p>
+                    <button>{{slider.buttonText}}</button>
+                </div>
+                <div class="img-box">
+                    <img src="{{slider.imageUrl}}" alt="{{slider.imageAlt}}" />
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- swiper ends here -->
+
+    <!-- Appointment section starts here -->
+
+    <section class="appointment">
+        <div class="innerSect">
+            <div class="leftSect">
+                <img src="./assets/images/landing/bring-care.png" alt="bring-care">
+                <img src="./assets/images/landing/bring-care.png" alt="bring-care">
+            </div>
+
+            <div class="rightSect">
+                <div class="topText">Greetins & Welcome <br>
+                    <span>DR. Sabina Hussain Joly</span>
+                </div>
+
+                <div class="midText">
+                    <h2>Book an appointment <br>
+                        <span>home with one click</span>
+                    </h2>
+                </div>
+
+                <div class="bottomText">
+                    Patients often need the three most fundamental features: the ability to book or cancel
+                    appointments, the option to get prescription drugs, and simple access to medical consultation
+                    information. All these requirements are met on Shaafi. Now you can approach our team of doctor
+                    experts with just one click from your smartphone or computer 24x7 at your own convenience.
+                    Shaafi is the only mobile healthcare app which is easily accessible to all its end-users by
+                    offering a hotline number and customer service for issue resolution. Moreover, you can use an
+                    agent's assistance to make reservations. Shaafi also deliver medications to your door anywhere
+                    in the country. Always at your service, you may also order diagnostic tests on Shaafi and take
+                    advantage of free home sample collection. Having access to Shaafi opens the door for an
+                    opportunity to get medical advice from the top experts nationwide that too at the comfort of
+                    your home or office without waiting in long queues for obtaining the appointments. You may
+                    simply download the app, get yourself registered, select the doctor for advice, and make the
+                    payment to fix the appointment followed by video consultation at the preferred time slot. After
+                    consultation you may obtain the e-prescription and order medicines or labtests if needed on the
+                    same app.
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Appointment section ends here -->
+
+    <!-- Book appointment section starts here -->
+
+    <section class="book-appointment">
+        <h2>Book an appointment</h2>
+        <p class="para">Instantly connect with a 24/7 expert, or select a doctor for a video visit. Why not schedule
+            an appointment right <br> away and get the immediate health advice from the top health professionals.
+        </p>
+
+        <div class="appointment-cards">
+            <div class="card" *ngFor="let card of cardInfo">
+                <img src="{{card.imageUrl}}" alt="{{card.imageAlt}}" />
+                <a routerLink="/{{card.title}}">{{card.title}}</a>
+                <p>{{card.text}}</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Book appointment section ends here -->
+
+    <!-- How it works section starts her -->
+
+    <section class="how-it-works">
+        <div class="inner-Sect">
+            <h2>How it works?</h2>
+            <p class="para">You just have to select your doctor, fill in the registration form, and pay the
+                consultation fee online followed by the <br> e-consultation with your doctor. Finally you get your
+                eprescription by which you can procure the medicines or order the <br> lab-tests for home sample
+                collection from Shaafi</p>
+
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slides">
+                        <img src="./assets/images/landing/Feeling_Syptoms.png" alt="">
+                        <img src="./assets/images/landing/Feeling_Syptoms.png" alt="">
+                        <h3> Step 01 How I am feeling / Symptom</h3>
+                    </div>
+                    <div class="slides">
+                        <img src="./assets/images/landing/2_Find_a_doctor.png" alt="">
+                        <img src="./assets/images/landing/2_Find_a_doctor.png" alt="">
+                        <h3> Step 02 Find my Doctor</h3>
+                    </div>
+                    <div class="slides">
+                        <img src="./assets/images/landing/3_Booking_Appointment.png" alt="">
+                        <img src="./assets/images/landing/3_Booking_Appointment.png" alt="">
+                        <h3> Step 03 Book an appointment</h3>
+                    </div>
+                    <div class="slides">
+                        <img src="./assets/images/landing/4_ONLINE_PAYMENT.png" alt="">
+                        <img src="./assets/images/landing/4_ONLINE_PAYMENT.png" alt="">
+                        <h3> Step 04 Make an online payment</h3>
+                    </div>
+                    <div class="slides">
+                        <img src="./assets/images/landing/5_Doctor_Consultation.png" alt="">
+                        <img src="./assets/images/landing/5_Doctor_Consultation.png" alt="">
+                        <h3> Step 05 Doctor consultation</h3>
+                    </div>
+                    <div class="slides">
+                        <img src="./assets/images/landing/6_E_Prescription.png" alt="">
+                        <img src="./assets/images/landing/6_E_Prescription.png" alt="">
+                        <h3> Step 06 Get your e-prescription</h3>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button onclick="prevSlider()" class="backBtn">
+                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.04883" y="7.14648" width="0.942809" height="18.951"
+                                transform="rotate(-90 1.04883 7.14648)" fill="black" />
+                            <rect width="0.945184" height="9.45184"
+                                transform="matrix(-0.708879 -0.70533 0.708879 -0.70533 0.669922 7.33398)"
+                                fill="black" />
+                            <rect width="0.945184" height="9.45184"
+                                transform="matrix(0.708879 -0.70533 0.708879 0.70533 0.669922 7.33398)" fill="black" />
+                        </svg>
+                    </button>
+                    <button onclick="nextSlider()">
+                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="18.9512" y="6.85352" width="0.942809" height="18.951"
+                                transform="rotate(90 18.9512 6.85352)" fill="black" />
+                            <rect width="0.945184" height="9.45184"
+                                transform="matrix(0.708879 0.70533 -0.708879 0.70533 19.3301 6.66602)" fill="black" />
+                            <rect width="0.945184" height="9.45184"
+                                transform="matrix(-0.708879 0.70533 -0.708879 -0.70533 19.3301 6.66602)" fill="black" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works section ends her -->
+
+    <!-- Article section starts here -->
+
+    <section class="article-section">
+        <h2>Read Top Articles From Health Experts</h2>
+        <p class="para">Subscribers are benefited by receiving free daily health advice on nutrition, beauty,exercise,
+            and other topics from experts. Additionally, paid tips from Baano health experts for particular inquiries
+            are also provided.
+        </p>
+    </section>
+
+    <!-- Article section ends here -->
+
+</main>
+
+<!-- footer section starts here  -->
+
+<footer>
+    <div class="footer-link">
+        <div class="footer-img">
+            <img src="./assets/images/landing/footer-logo.png" alt="footer image">
+            <img src="./assets/images/landing/footer-logo.png" alt="footer image">
+        </div>
+        <div class="link-box">
+            <h4>Company</h4>
+            <a routerLink="/hospital" class="link">Hospital</a>
+            <a routerLink="/pharmacy" class="link">Pharmacy</a>
+            <a routerLink="/laboratory" class="link">Laboratory</a>
+            <a routerLink="/about-baano" class="link">About Baano</a>
+            <a routerLink="/faq" class="link">FAQ</a>
+            <a routerLink="/privacy-policy" class="link">Privacy Policy</a>
+        </div>
+        <div class="link-box">
+            <h4>Social</h4>
+            <a routerLunk="/" class="link">Facebook</a>
+            <a routerLunk="/" class="link">Twitter</a>
+            <a routerLunk="/" class="link">Instagram</a>
+            <a routerLunk="/" class="link">Youtube</a>
+            <a routerLunk="/" class="link">Linkedin</a>
+        </div>
+        <div class="link-box">
+            <h4>For Queries <a href="tel: 3177" class="tel">3177</a></h4>
+        </div>
+    </div>
+
+    <a class="arrow-top" href="#top">
+        <svg width="43" height="60" viewBox="0 0 43 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="21.5605" y="3.14648" width="2.82843" height="56.8532" fill="black" />
+            <rect width="2.83555" height="28.3555" transform="matrix(0.70533 -0.708879 0.70533 0.708879 20.998 2.00977)"
+                fill="black" />
+            <rect width="2.83555" height="28.3555" transform="matrix(0.70533 0.708879 -0.70533 0.708879 20.998 2.00977)"
+                fill="black" />
+        </svg></a>
+
+    <p>Copyright© Baano | All rights reserved.</p>
+</footer>
+
+<!-- footer section ends here  -->

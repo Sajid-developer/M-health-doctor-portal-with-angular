@@ -1,0 +1,16 @@
+<main>
+    <section *ngIf="isAuth" class="flex w-full">
+      <div class="max-w-64 w-64">
+        <app-authenticated-sidebar></app-authenticated-sidebar>
+      </div>
+      <div class="flex-1 text-sm w-[calc(100%-16rem)] px-8">
+        <section class="fixed top-0 w-[calc(100%-16rem)] p-4 bg-white z-50 pr-7">
+            <app-authenticated-header></app-authenticated-header>
+        </section>
+      </div>
+    </section>
+        
+    <section *ngIf="!isAuth">
+      <app-landing-page></app-landing-page>
+    </section>
+    </main>

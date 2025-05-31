@@ -1,0 +1,243 @@
+.mainContainer{
+    position: absolute;
+    top: 0;
+    left: 260px;
+    width: calc(100% - 260px);
+    height: 100vh;
+    background-color: rgb(192, 192, 192);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  .mainContainer .header{
+    width: 100%;
+    /* background-color: white; */
+    box-sizing: border-box;
+  }
+  .header .leftcontent{
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .leftcontent span{
+    font-size: 13px;
+    margin-top: -3px;
+  }
+  span i.arrow{
+    margin-top: 3px;
+    font-size: 10px;
+  }
+  .rightcontent a.box{
+    width: 30px;
+    height: 30px;
+    background-color: #3ed49b;
+    color: white;
+    font-weight: 600;
+    padding: 0;
+    margin-right: 20px;
+  }
+  .rightcontent a.bell{
+    position: relative;
+    /* border: 1px solid red; */
+    font-size: 19px;
+  }
+  a.bell::before{
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: red;
+  }
+  .mainContainer .bottomSect{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 20px;
+    /* padding:15px 0; */
+    box-sizing: border-box;
+  }
+  .mainContainer .form input{
+    width: 300px;
+    padding: 10px 12px 10px 20px;
+    margin-right:15PX;
+    border-radius: 30px;
+    background-color: rgb(233, 233, 233);
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    /* border: 1px solid gray; */
+  }
+  select{
+    width: 210px;
+    padding: 10px 12px 10px 20px;
+    margin-right:15PX;
+    border-radius: 30px;
+    background-color: rgb(233, 233, 233);
+    color:rgb(71, 71, 71);
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+  }
+  select option{
+    background-color: rgb(15, 15, 59);
+    color: white;
+  }
+  .mainContainer .form label{
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 8px;
+  }
+  .form input::placeholder{
+    color: #716f86;
+  }
+  .mainContainer .form button{
+    display: flex;
+    align-items: center;
+    height: 34px;
+    background-color: rgb(17, 166, 215);
+    padding: 8px 26px;
+    margin: 0 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    transition: 0.2s ease;
+  }
+  .bottomSect .form .ticketBtns button{
+    padding: 20px 26px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .bottomSect .form label{
+    /* border: 2px solid red; */
+    font-size: 13px;
+    margin: 0;
+    margin-left: 4px;
+    margin-bottom: 8px;
+  }
+  .bottomSect label span{
+    font-size: 16px;
+    color: red;
+  }
+  .bottomSect .form .ticketInput{
+   width: 100%;
+   font-size: 13px;
+   background-color: transparent;
+   border-radius: 8px;
+   border: 2px solid rgb(226, 226, 226);
+  }
+  .bottomSect .form .descriptionBox{
+    width: 100%;
+    /* height: 500px; */
+   /* background-color: aqua; */
+   border-radius: 8px;
+   border: 1.6px solid rgb(226, 226, 226);
+  }
+  .tab-Section .tabs span{
+    font-size: 13px;
+    color: rgb(116, 116, 116);
+    font-weight: 500;
+  }
+  .bottomSect .descriptionBox .tab-Section .upgradeBtn{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: rgb(227, 248, 255);
+    font-size: 11px;
+    font-weight: 500;
+    color: rgb(23, 133, 251);
+  }
+  .descriptionBox .editIcons{
+    /* background-color: red; */
+    font-size: 13px;
+    color: black;
+    margin-top: -7px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+  }
+  .descriptionBox .editIcons svg{
+    margin: 0 6px;
+  }
+  .descriptionBox textarea{
+    outline: none;
+    border-radius: 0 0 8px 8px;
+    border: 1.5px solid transparent;
+  }
+  textarea:focus{
+    border: 1.5px solid deepskyblue;
+  }
+  .form button.reset{
+    background-color:black;
+    color: whitesmoke;
+    font-weight: 500;
+    padding: 8px 22px;
+    box-shadow: 1px 3px 6px rgba(0,0,0,0.4);
+  }
+  .mainContainer .form button.reset:hover{
+    background-color: rgb(220, 220, 220);
+    color: rgb(17, 24, 61);
+  }
+  .mainContainer .form button:hover{
+    background-color: rgb(43, 124, 255);
+  }
+  .order-wrapper .orders{
+   font-size: 18px;
+   font-weight: 500;
+   color: #3c4766;
+  }
+  .orders.head{
+    font-size: 14px;
+    font-weight: 550;
+    color: rgb(66, 66, 104);
+  }
+  .order-wrapper button{
+    font-size: 14px;
+    font-weight: 530;
+  }
+  .order-wrapper .fa-share{
+    transform: rotateY(180deg);
+  }
+  .mid-section{
+    font-size:14px;
+    font-weight: 500;
+    color: rgb(78, 86, 137);
+  }
+  .mid-section span{
+    font-size:14px;
+    font-weight: 600;
+    color: rgb(59, 70, 142);
+  }
+  table tr{
+    border-bottom: 1.5px solid rgb(238, 238, 238);
+    /* border-top: 1.5px solid rgb(71, 71, 202); */
+  }
+  table tr:nth-child(1){
+    /* background-color: #2e50a6; */
+    /* color: white; */
+    border-top: 1.5px solid rgb(238, 238, 238);
+  }
+  table tr th{
+    color: #243c78;
+    font-size: 13px;
+    font-weight: 550;
+    padding: 15px 0;
+  }
+  table tr td{
+    font-size: 13px;
+    font-weight: 450;
+    padding: 14px 0;
+  }
+  table tr td i{
+    font-size: 18px;
+  }
+  
+  

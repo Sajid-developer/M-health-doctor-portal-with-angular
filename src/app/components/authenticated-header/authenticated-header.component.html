@@ -1,0 +1,37 @@
+<nav class="w-full">
+  <header class="flex items-center justify-between pr-10">
+    <div class="flex gap-1 items-end">
+      <fa-icon [icon]="houseIcon" class="text-sm"></fa-icon>
+      <fa-icon [icon]="arrowIcon" class="text-xs"></fa-icon>
+      <p class="font-semibold leading-[18px] ml-1">{{currentPage}}</p>
+    </div>
+    <div class="flex item-center justify-between gap-6">
+      <div>
+        <select class="" title="select Language" (change)="changeLanguage($event)" [value]="language">
+            <option value="en" selected>English</option>
+            <option value="so" selected>Somali</option>
+          </select>
+      </div>
+      <div class="relative flex gap-10">
+        <div class="flex item-center gap-2 justify-center">
+          <div class="flex items-center cursor-pointer" (click)="showModal()">
+            <span>user name</span>
+            <fa-icon [icon]="arrowDownIcon" class="text-xs"></fa-icon>
+          </div>
+          <div class="w-7 h-7 rounded-full bg-green-45 cursor-pointer flex items-center justify-center">
+            <!-- <img class="w-5 h-5 rounded-full" src="../" /> -->
+            <span>S</span>
+          </div>
+        </div>
+        <!-- User Profile Modal -->
+        <div *ngIf="isUserModalOpen" class="absolute top-10 right-20 w-52 py-3 px-4 flex flex-col item-center gap-3 bg-white all-side-box-shadow">
+          <p class="text-gray-45 hover:text-blue-500 cursor-pointer text-sm" (click)="handleProfileClick()">Profile</p>
+          <p class="text-gray-45 hover:text-blue-500 cursor-pointer text-sm" (click)="handleLogout()">Logout</p>
+        </div>
+        <div>
+          <fa-icon [icon]="bellIcon" class="text-lg cursor-pointer"></fa-icon>
+        </div>
+      </div>
+    </div>
+  </header>
+</nav>

@@ -1,0 +1,56 @@
+<!-- Login section starts here -->
+
+<main class="mainContainer fixed top-0 left-0 w-full h-full">
+
+    <section class="login-container w-full h-full flex">
+        <div class="form-box bg-gray-50 py-8 px-16">
+            <a routerLink="/"><img src="./assets/images/landing/footer-logo.png" alt="Logo image" width="250"></a>
+            <h2 class="text-center mt-4">Sign In</h2>
+            <p class="text-gray-400 text-lg font-medium text-center py-1">Sign In To Stay Connected</p>
+           
+            <form #formData="ngForm" (ngSubmit)="getUserData(formData.value)" class="w-full flex flex-col gap-10 justify-center py-5 px-32 rounded-xl mt-5">
+                <div class="input-box flex flex-col">
+                    <label class="w-full text text-gray-500 mb-1 ml-2">Mobile</label>
+                    <div class="input-group flex gap-4">
+                        <div
+                            class="w-auto flex items-center bg-white border border-gray-300 border-solid rounded-full py-2 px-6">
+                            <img src="./assets/images/landing/flag-img.png" alt="" width="20" height="auto"><span
+                                class="text font-semibold text-green-500 ml-2">252</span></div>
+                        <input type="text" name="mobile" ngModel placeholder="Enter your mobile number"
+                            class="flex-1 py-3 px-5 rounded-full border border-gray-300 border-solid outline-none font-medium">
+                    </div>
+                </div>
+                <div class="input-box flex flex-col">
+                    <label class="w-full text text-gray-500 mb-1 ml-2">Password</label>
+                    <input type="password" name="password" ngModel id="" placeholder="Enter your password here"
+                        class="flex-1 py-3 px-5 outline-none border border-gray-300 border-solid rounded-full box-border font-medium">
+                </div>
+
+                <div class="input-box flex justify-between px-2">
+                    <div class="left-box flex items-center">
+                        <input type="checkbox" name="checked" ngModel id="remember-me"
+                            class="w-6 h-6 outline-none rounded-full box-border accent-blue-900">
+                        <label for="remember-me" class="text text-gray-400 ml-3 cursor-pointer">Remember Me</label>
+                    </div>
+                    <div class="right-box">
+                        <a routerLink="/forgot-password"
+                            class="text text-red-400 font-medium no-underline hover:underline">Forgot password</a>
+                    </div>
+                </div>
+
+                <div class="form-btn px-2">
+                    <button type="submit"
+                        class="bg-green-400 text-white border-none outline-none text py-3 px-16 rounded-full font-medium hover:bg-green-500">SUBMIT</button>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="image-box">
+            <img src="./assets/images/landing/login-img.jpg" alt="" class="w-full h-full object-cover">
+        </div>
+
+    </section>
+</main>
+
+<!-- Login section ends here -->

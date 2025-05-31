@@ -1,0 +1,38 @@
+<aside class="w-full min-h-screen px-1 pt-8 flex flex-col gap-3 items-center shadow-lg">
+    <div class="h-10">
+      <img class=" w-32 h-8 " src="../../../assets/images/profile_imgs/logo.png" alt="logo" />
+    </div>
+    <div class="flex flex-col items-start w-full">
+      <div *ngFor="let menu of sidebarMenus" class="relative inset-0 text-gray-45 group w-full text-sm ">
+        <!-- if menu has route link start -->
+        <a *ngIf="menu.route" routerLink="{{menu.route}}"
+          class="flex gap-2 items-baseline w-full px-4 py-2 hover:bg-pink-FF-light hover:text-pint-F9 font-semibold"
+          (click)="showSubMenu(menu)">
+          <div class="absolute inset-0 group-hover:bg-pink-FF-drk transition-all duration-300 ease-in-out flex w-1 h-10">
+          </div> <fa-icon [icon]="menu.icon" class="text-gray-45 text-lg mr-2"></fa-icon> {{menu.title}}
+          <fa-icon *ngIf="menu.isSubMenu" [ngClass]="menu.showSubMenu ? 'rotate-90' : 'rotate-0'"
+            class="transition-all text-gray-45 text-xs mr-2" [icon]="chevronRight"></fa-icon>
+        </a>
+        <!-- if menu has route link end -->
+        <!-- if menu don't have route link start -->
+        <span *ngIf="!menu.route"
+          class="flex gap-2 items-baseline w-full px-4 py-2 hover:bg-pink-FF-light font-semibold cursor-pointer"
+          (click)="showSubMenu(menu)">
+          <div class="absolute inset-0 group-hover:bg-pink-FF-drk transition-all duration-300 ease-in-out flex w-1 h-10">
+          </div> <fa-icon [icon]="menu.icon" class="text-gray-45 text-lg mr-2"></fa-icon> {{menu.title}}
+          <fa-icon *ngIf="menu.isSubMenu" [ngClass]="menu.showSubMenu ? 'rotate-90' : 'rotate-0'"
+            class="transition-all text-gray-45 text-xs mr-2" [icon]="chevronRight"></fa-icon>
+        </span>
+        <!-- if menu don't have route link end -->
+        <div *ngIf="menu.isSubMenu && menu.showSubMenu" class="ml-10">
+          <div *ngFor="let subMenu of menu.subMenu">
+            <a routerLink="{{subMenu.route}}" class="flex gap-2 items-center"> <fa-icon class="text-xs"
+                [icon]="subMenu.icon"></fa-icon>
+              {{subMenu.title}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </aside>
+  

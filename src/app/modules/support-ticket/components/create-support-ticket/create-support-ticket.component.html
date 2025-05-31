@@ -1,0 +1,122 @@
+<main>
+    <section class=" flex w-full">
+    
+      <div class="flex-1 text-sm ">
+        <!-- <section class="fixed ml-64 p-2 top-0 w-[calc(100%-16rem)] z-50">
+          <app-authenticated-header></app-authenticated-header>
+        </section> -->
+        <section class=" py-16 w-auto place-self-center flex place-content-center ">
+          <main class=" dashboard-card-box-shadow w-full h-auto  flex flex-col border rounded-3xl shadow-lg">
+            <div class=" place-content-center bottomSect box-border p-2 text-slate-600 flex flex-wrap justify-between overflow-hidden">
+  
+              <div class=" w-full px-4 mb-1 flex justify-between">
+  
+                <div class="orders head py-2"><i class="fa-solid fa-heart"></i>Help & Support</div>
+                
+                <button class="mr-5 text-black py-1 px-6 rounded-3xl hover:bg-sky-700" title="Create ticket">
+                  <fa-icon [icon]="backIcon" > </fa-icon>BACK</button>
+              </div>
+            
+  
+              <div class="form-container w-full rounded-3xl mt-2">
+                <form action="" class="form w-full flex flex-col p-7">
+                  <div class="input-group flex flex-col my-3">
+                    <label for="">Support Ticket Title <span class="ml-1">*</span></label>
+                    <input type="text" name="ticket" class="ticketInput h-10 rounded-md" placeholder="Enter Support Ticket Title">
+                  </div>
+                  <div class="input-group flex flex-col my-3">
+                    <label for="file">Attachment</label>
+                    <input type="file" name="file" id="file" class="ticketInput">
+                  </div>
+  
+                  <div class="input-group flex flex-col my-3">
+                    <label for="">Support Ticket Description <span class="ml-1">*</span></label>
+  
+                    <div class="descriptionBox flex flex-col">
+                      <div class="tab-Section flex justify-between items-center py-2 px-4">
+                        <div class="tabs flex gap-3 ml-4">
+                          <span>File</span>
+                          <span>Edit</span>
+                          <span>View</span>
+                          <span>Insert</span>
+                          <span>Format</span>
+                        </div>
+                        <button class="upgradeBtn"><i class="fa-solid fa-bolt mr-2 text-red-500"></i>Upgrade</button>
+                      </div>
+                      <div class="editIcons flex px-6 py-3">
+                        <div class="left flex">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false">
+                            <path
+                              d="M7.8 19c-.3 0-.5 0-.6-.2l-.2-.5V5.7c0-.2 0-.4.2-.5l.6-.2h5c1.5 0 2.7.3 3.5 1 .7.6 1.1 1.4 1.1 2.5a3 3 0 0 1-.6 1.9c-.4.6-1 1-1.6 1.2.4.1.9.3 1.3.6s.8.7 1 1.2c.4.4.5 1 .5 1.6 0 1.3-.4 2.3-1.3 3-.8.7-2.1 1-3.8 1H7.8Zm5-8.3c.6 0 1.2-.1 1.6-.5.4-.3.6-.7.6-1.3 0-1.1-.8-1.7-2.3-1.7H9.3v3.5h3.4Zm.5 6c.7 0 1.3-.1 1.7-.4.4-.4.6-.9.6-1.5s-.2-1-.7-1.4c-.4-.3-1-.4-2-.4H9.4v3.8h4Z"
+                              fill-rule="evenodd" />
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false">
+                            <path
+                              d="m16.7 4.7-.1.9h-.3c-.6 0-1 0-1.4.3-.3.3-.4.6-.5 1.1l-2.1 9.8v.6c0 .5.4.8 1.4.8h.2l-.2.8H8l.2-.8h.2c1.1 0 1.8-.5 2-1.5l2-9.8.1-.5c0-.6-.4-.8-1.4-.8h-.3l.2-.9h5.8Z"
+                              fill-rule="evenodd" />
+                          </svg>
+                        </div>
+                        <div class="mid mx-7 flex">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false">
+                            <path
+                              d="M5 5h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 1 1 0-2Zm0 4h8c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 1 1 0-2Zm0 8h8c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 0 1 0-2Zm0-4h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 0 1 0-2Z"
+                              fill-rule="evenodd" />
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false">
+                            <path
+                              d="M5 5h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 1 1 0-2Zm3 4h8c.6 0 1 .4 1 1s-.4 1-1 1H8a1 1 0 1 1 0-2Zm0 8h8c.6 0 1 .4 1 1s-.4 1-1 1H8a1 1 0 0 1 0-2Zm-3-4h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 0 1 0-2Z"
+                              fill-rule="evenodd" />
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false">
+                            <path
+                              d="M5 5h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 1 1 0-2Zm6 4h8c.6 0 1 .4 1 1s-.4 1-1 1h-8a1 1 0 0 1 0-2Zm0 8h8c.6 0 1 .4 1 1s-.4 1-1 1h-8a1 1 0 0 1 0-2Zm-6-4h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 0 1 0-2Z"
+                              fill-rule="evenodd" />
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false">
+                            <path
+                              d="M5 5h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 1 1 0-2Zm0 4h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 1 1 0-2Zm0 4h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 0 1 0-2Zm0 4h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 0 1 0-2Z"
+                              fill-rule="evenodd" />
+                          </svg>
+                        </div>
+                        <div class="right flex">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="fill-slate-400" width="24" height="24"
+                            focusable="false">
+                            <path
+                              d="M7 5h12c.6 0 1 .4 1 1s-.4 1-1 1H7a1 1 0 1 1 0-2Zm5 4h7c.6 0 1 .4 1 1s-.4 1-1 1h-7a1 1 0 0 1 0-2Zm0 4h7c.6 0 1 .4 1 1s-.4 1-1 1h-7a1 1 0 0 1 0-2Zm-5 4h12a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2Zm1.6-3.8a1 1 0 0 1-1.2 1.6l-3-2a1 1 0 0 1 0-1.6l3-2a1 1 0 0 1 1.2 1.6L6.8 12l1.8 1.2Z"
+                              fill-rule="evenodd" />
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false">
+                            <path
+                              d="M7 5h12c.6 0 1 .4 1 1s-.4 1-1 1H7a1 1 0 1 1 0-2Zm5 4h7c.6 0 1 .4 1 1s-.4 1-1 1h-7a1 1 0 0 1 0-2Zm0 4h7c.6 0 1 .4 1 1s-.4 1-1 1h-7a1 1 0 0 1 0-2Zm-5 4h12a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2Zm-2.6-3.8L6.2 12l-1.8-1.2a1 1 0 0 1 1.2-1.6l3 2a1 1 0 0 1 0 1.6l-3 2a1 1 0 1 1-1.2-1.6Z"
+                              fill-rule="evenodd" />
+                          </svg>
+                        </div>
+                      </div>
+                      <textarea name="description" id="" rows="12" class="w-full px-6 py-4"></textarea>
+                    </div>
+                  </div>
+                  <div class="flex gap-5 my-4">
+                    <button type="submit" class="py-2 px-6 bg-sky-500 text-white rounded-3xl hover:bg-sky-700"
+                      title="Create ticket"><i class="fa-solid fa-plus mr-2"></i>CREATE</button>
+                    <button type="reset" class=" bg-slate-100 border border-slate-400 py-2 px-4 rounded-full">
+                      <i class="fa-solid fa-xmark mr-2"></i>
+                      CANCEL
+                    </button>
+                  </div>
+                </form>
+              </div>
+  
+  
+  
+  
+            </div>
+  
+          </main>
+        </section>
+        <ngx-spinner [fullScreen]="true" size="large" color="#FFFFFF" type="ball-spin-clockwise-fade">
+          <p class="text-white text-2xl">Loading...</p>
+        </ngx-spinner>
+      </div>
+    </section>
+  </main>
+  

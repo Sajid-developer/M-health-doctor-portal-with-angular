@@ -1,0 +1,64 @@
+<section class="py-16">
+    <div class="bg-blue-27 mt-4 rounded-md p-3 text-white">
+        <p class="font-semibold text-lg">TIME SETTING</p>
+    </div>
+    <form [formGroup]="timeSlotForm">
+        <div class="grid grid-cols-2 mt-4">
+            <div class="">
+                <label for="slotDuration">Slot Type {{timeSlotForm.value?.slotDuration}}</label>
+                <select
+                    formControlName="slotDuration"
+                    class="w-1/2 px-5 ml-3 border border-gray-CE h-10"
+                    (change)="getNumberOfSlotsInADay()"
+                >
+                    <option value="15">15</option>
+                    <option value="30">30</option>
+                    <option value="60">1</option>
+                </select>
+            </div>
+            <div class="flex items-center justify-end">
+                <p class="text-[28px] text-gray-45">
+                    <span>{{timeSlotForm.value?.fromDate}}</span>
+                    <span> TO </span>
+                    <span>{{timeSlotForm.value?.toDate}}</span>
+                </p>
+            </div>
+        </div>
+        <div class="">
+            <table class="w-full time-slot-table">
+                <thead>
+                    <tr>
+                        <th>time</th>
+                        <th
+                            *ngFor="let day of daysOfWeek;"
+                        >{{day}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container 
+                        *ngFor="let slot of numberOfSlotsInADayArray;"
+                    >
+                        <tr>
+                            <td>
+                                <p class="text-center">
+                                    <span>{{minutesToHoursFormat(slot?.startTime)}}</span>
+                                    <span> - </span>
+                                    <span>{{minutesToHoursFormat(slot?.endTime)}}</span>
+                                </p>
+                            </td>
+                            <td
+                                *ngFor="let day of daysOfWeek;"
+                                (click)="addSlot(slot, day)"
+                            >
+                                {{day}}
+                            </td>
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+        <div class="">
+
+        </div>
+    </form>
+</section>

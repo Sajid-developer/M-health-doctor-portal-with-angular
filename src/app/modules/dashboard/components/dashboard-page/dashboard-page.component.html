@@ -1,0 +1,57 @@
+<section class="max-h-screen overflow-auto pr-7">
+    <!-- Dashboard component -->
+    <main class="w-full py-14 flex flex-col gap-4">
+      <!-- cards section -->
+      <section class="grid grid-cols-3 items-center py-4  z-10 justify-between">
+        <div
+          class="px-4"
+          *ngFor="let card of dashboardCardDetails"
+        >
+          <div
+            class="w-[305px] box-border border border-transparent flex flex-col items-center py-16 px-9 rounded-[2rem] all-side-box-shadow-blue min-w-56 z-10 hover:border hover:border-pink-FF-drk hover:transition-all bg-white"
+            >
+            <img class="h-36 w-auto pb-9" src="{{card.icon}}" alt="card-img" title="card.title" />
+            <span class="text-center font-medium text-xl text-gray-45 pb-2">{{card.title}}</span>
+            <button type="button" class="blue_button flex items-center text-center font-bold"
+              style="background-color: var(--blue-6A) !important;"
+            >
+              CONTINUE
+              <fa-icon [icon]="arrowRightIcon" class="text-sm ml-1"></fa-icon>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Orders -->
+      <section class="w-[calc(100%-1rem)] rounded-3xl all-side-box-shadow px-2 py-7 z-20">
+        <p class="pl-5 py-2 text-gray-45 text-sm font-bold">
+          <fa-icon [icon]="heartIcon" class="text-sm mr-2"></fa-icon>
+          Recent Orders
+        </p>
+        <table class="table w-full">
+          <thead class="table-header-group border-t border-b border-y-gray-200">
+            <th *ngFor="let headData of roTableHeadData" class="py-3">{{headData}}</th>
+          </thead>
+          <tbody>
+            <tr class="py-2" *ngFor="let bodyData of roTableBodyData">
+              <td class="text-center">{{bodyData?.caseId}} </td>
+              <td class="text-center">{{bodyData?.doctorName}} </td>
+              <td class="text-center">{{bodyData?.consultType}} </td>
+              <td class="text-center">{{bodyData?.date}} {{bodyData?.time}}</td>
+              <td class="text-center">{{bodyData?.charges}} </td>
+              <td class="text-center">{{bodyData?.status}} </td>
+              <td class="text-center flex items-center justify-center gap-2 py-1">
+                <button class="bg-blue-27 px-2 rounded-full text-xs">CANCEL</button>
+                <button class="bg-orange-300 px-2 rounded-full text-xs">VIDEO</button>
+              </td>
+            </tr>
+            <tr class="py-2">
+              <td [attr.colspan]="roTableHeadData.length" class="text-center py-3">
+                <a class="blue_button font-bold">VIEW MORE ACTIVE/OPEN CONSULTATION</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+</section>
